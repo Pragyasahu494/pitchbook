@@ -1,0 +1,29 @@
+{
+  "name": "cedarbridge-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "npm --prefix server run dev",
+    "seed": "npm --prefix server run seed",
+    "dev:full": "concurrently -n server,client -c blue,green \"npm:server\" \"npm:dev\"",
+    "install:all": "npm install && npm --prefix server install"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "lucide-react": "^0.446.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.4.2"
+  }
+}
